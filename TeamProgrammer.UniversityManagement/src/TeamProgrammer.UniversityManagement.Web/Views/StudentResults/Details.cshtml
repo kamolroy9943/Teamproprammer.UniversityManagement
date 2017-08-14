@@ -1,0 +1,75 @@
+﻿@model TeamProgrammer.UniversityManagement.Core.Entities.StudentResult
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>StudentResult</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Course.CourseName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Course.CourseName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Student.StudentName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Student.StudentName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClassTest)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClassTest)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AssignMent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AssignMent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Midterm)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Midterm)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SubjectMark)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SubjectMark)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gpa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gpa)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.StudentResultId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

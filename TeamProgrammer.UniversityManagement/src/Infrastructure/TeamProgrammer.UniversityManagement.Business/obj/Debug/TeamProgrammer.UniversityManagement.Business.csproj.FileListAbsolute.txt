@@ -1,0 +1,11 @@
+D:\Team Programmers\TeamProgrammer.UniversityManagement\src\Infrastructure\TeamProgrammer.UniversityManagement.Business\bin\Debug\TeamProgrammer.UniversityManagement.Business.dll
+D:\Team Programmers\TeamProgrammer.UniversityManagement\src\Infrastructure\TeamProgrammer.UniversityManagement.Business\bin\Debug\TeamProgrammer.UniversityManagement.Business.pdb
+D:\Team Programmers\TeamProgrammer.UniversityManagement\src\Infrastructure\TeamProgrammer.UniversityManagement.Business\obj\Debug\TeamProgrammer.UniversityManagement.Business.csprojResolveAssemblyReference.cache
+D:\Team Programmers\TeamProgrammer.UniversityManagement\src\Infrastructure\TeamProgrammer.UniversityManagement.Business\obj\Debug\TeamProgrammer.UniversityManagement.Business.dll
+D:\Team Programmers\TeamProgrammer.UniversityManagement\src\Infrastructure\TeamProgrammer.UniversityManagement.Business\obj\Debug\TeamProgrammer.UniversityManagement.Business.pdb
+D:\Team Programmers\TeamProgrammer.UniversityManagement\src\Infrastructure\TeamProgrammer.UniversityManagement.Business\bin\Debug\TeamProgrammer.UniversityManagement.Core.dll
+D:\Team Programmers\TeamProgrammer.UniversityManagement\src\Infrastructure\TeamProgrammer.UniversityManagement.Business\bin\Debug\TeamProgrammer.UniversityManagement.DataRepository.dll
+D:\Team Programmers\TeamProgrammer.UniversityManagement\src\Infrastructure\TeamProgrammer.UniversityManagement.Business\bin\Debug\EntityFramework.dll
+D:\Team Programmers\TeamProgrammer.UniversityManagement\src\Infrastructure\TeamProgrammer.UniversityManagement.Business\bin\Debug\TeamProgrammer.UniversityManagement.Core.pdb
+D:\Team Programmers\TeamProgrammer.UniversityManagement\src\Infrastructure\TeamProgrammer.UniversityManagement.Business\bin\Debug\TeamProgrammer.UniversityManagement.DataRepository.pdb
+D:\Team Programmers\TeamProgrammer.UniversityManagement\src\Infrastructure\TeamProgrammer.UniversityManagement.Business\bin\Debug\EntityFramework.xml

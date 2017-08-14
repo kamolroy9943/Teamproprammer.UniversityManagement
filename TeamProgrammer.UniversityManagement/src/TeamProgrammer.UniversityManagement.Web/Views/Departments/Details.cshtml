@@ -1,0 +1,67 @@
+﻿@model TeamProgrammer.UniversityManagement.Core.Entities.Department
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Department</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DeptName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DeptName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DeptCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DeptCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DeptCredit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DeptCredit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Adminstrator)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Adminstrator)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StratDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StratDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Building)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Building)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.DepartmentId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

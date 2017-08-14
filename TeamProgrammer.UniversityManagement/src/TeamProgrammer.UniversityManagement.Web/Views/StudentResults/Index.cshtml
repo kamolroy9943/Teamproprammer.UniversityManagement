@@ -1,0 +1,70 @@
+﻿@model IEnumerable<TeamProgrammer.UniversityManagement.Core.Entities.StudentResult>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Course.CourseName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Student.StudentName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClassTest)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AssignMent)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Midterm)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SubjectMark)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gpa)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Course.CourseName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Student.StudentName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClassTest)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AssignMent)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Midterm)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SubjectMark)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Gpa)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.StudentResultId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.StudentResultId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.StudentResultId })
+        </td>
+    </tr>
+}
+
+</table>

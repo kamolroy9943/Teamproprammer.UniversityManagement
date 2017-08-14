@@ -1,0 +1,165 @@
+﻿@model TeamProgrammer.UniversityManagement.Core.Entities.ViewModels.CourseDeptSemester
+@{
+    ViewBag.Title = "ShowStudentCourses";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 style="margin-top: 20px; margin-bottom: 50px;text-align: center">View Student Enrolled Course List</h2>
+@using (Html.BeginForm())
+{
+
+    <div>
+        <table class="table table-bordered table-hover table-striped text-center">
+            <thead>
+                <tr style="background-color: slategray; color: white;font-size: 20px;">
+                    <th>Department</th>
+                    <th>Session</th>
+                    <th>Semester</th>
+                    <th>Student</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div>
+                            @Html.DropDownList("DepartmentId", null, "---Select One---", htmlAttributes: new {@class = "form-control"})
+                        </div>
+                    </td>
+
+                    <td>
+                        <div>
+                            @Html.DropDownList("SessionId", new SelectList("", "", ""), new { @class = "form-control" })
+                        </div>
+                    </td>
+
+                    <td>
+                        <div>
+                            @Html.DropDownList("SemesterId", new SelectList("", "", ""), new { @class = "form-control" })
+                        </div>
+                    </td>
+
+                    <td>
+                        <div>
+                            @Html.DropDownList("StudentId", new SelectList("", "", ""), new { @class = "form-control" })
+                        </div>
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div>
+        <table id="StudentTable" class="table table-striped table-bordered table-hover">
+            <thead>
+                <tr  style="background-color: slategray; color: white;font-size: 20px;">
+                    <td>Course Name</td>
+                    <td>Course Code</td>
+                    <td>Course Discription</td>
+                    <td>Course Credit</td>
+                </tr>
+            </thead>
+            <tbody id="bodyCal" style="font-size: 18px;"></tbody>
+        </table>
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script>
+        $(document).ready(function () {
+            $("#DepartmentId").change(function () {
+                $.ajax({
+                    url: "@Url.Action("GetSessions", "Students")",
+                    dataType: "json",
+                contentType: "application/json",
+                type: "Get",
+                success: function (response) {
+                    $("#SessionId").empty();
+                    var blankOption = "<option value=''>---Select One--- </option>";
+                    $("#SessionId").append(blankOption);
+                    $.each(response, function (key, value) {
+                        var option = "<option value='" + value.sessionId + "'>" + value.sessionName + "</option>";
+                        $("#SessionId").append(option);
+                    });
+                },
+                error: function (response) {
+                   
+                }
+            });
+        }),
+            $("#SessionId").change(function () {
+                $.ajax({
+                    url: "@Url.Action("GetSemesters", "Students")",
+                    dataType: "json",
+                    contentType: "application/json",
+                    type: "Get",
+                    success: function (response) {
+                        $("#SemesterId").empty();
+                        var blankOption = "<option value=''>---Select One--- </option>";
+                        $("#SemesterId").append(blankOption);
+                        $.each(response, function (key, value) {
+                            var option = "<option value='" + value.SemesterId + "'>" + value.SemesterName + "</option>";
+                            $("#SemesterId").append(option);
+                        });
+                    },
+                    error: function (response) {
+                        var blankOption = "<option value=''> ------Select One------ </option>";
+                        $("#CourseId").select(blankOption);
+                    }
+                });
+            }),
+            $("#SemesterId").change(function () {
+                var deptId = $("#DepartmentId").val();
+                var semesterId = $("#SemesterId").val();
+                var sessionId = $("#SessionId").val();
+                var json2 = {
+                    deptId: deptId,
+                    semesterId: semesterId,
+                    sessionId: sessionId
+                };
+                $.ajax({
+                    url: "@Url.Action("GetStudentBySemesterIdSessionIdAndDeptId", "Students")",
+                    data: JSON.stringify(json2),
+                    dataType: "json",
+                    contentType: "application/json",
+                    type: "POST",
+                    success: function (response) {
+                        $("#StudentId").empty();
+                        var blankOption = "<option value=''>---Select One--- </option>";
+                        $("#StudentId").append(blankOption);
+                        $.each(response, function (key, value) {
+                            var option = "<option value='" + value.studentId + "'>" + value.registration + "</option>";
+                            $("#StudentId").append(option);
+                        });
+                    },
+                    error: function (response) {
+                        var blankOption = "<option value=''> ------Select One------ </option>";
+                        $("#CourseId").select(blankOption);
+                    }
+                });
+            }),
+                $("#StudentId").change(function () {
+                    var studentId = $("#StudentId").val();
+                    var json2 = { studentId: studentId };
+                    $.ajax({
+                        url: "@Url.Action("GetCourseByStudentId", "Students")",
+                        data: JSON.stringify(json2),
+                        dataType: "json",
+                        contentType: "application/json",
+                        type: "POST",
+                        success: function (response) {
+                            $("#bodyCal").empty();
+                            $.each(response, function (key, value) {
+                                $("#bodyCal").append("<tr><td>" + value.courseName + "</td><td>" + value.courseCode + "</td><td>" + value.description + "</td><td>" + value.credit + "</td></tr>");
+                            });
+                        },
+                        error: function (response) {
+                            var blankOption = "<option value=''> ------Select One------ </option>";
+                            $("#CourseId").select(blankOption);
+                        }
+                    });
+                });
+        });
+    </script>
+}

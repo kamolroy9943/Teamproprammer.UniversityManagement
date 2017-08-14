@@ -1,0 +1,77 @@
+﻿
+
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                <img src="~/img/19621444_1955298181382694_1582975050_n.jpg" alt="Istt Logo" style="height: 60px;margin-right: 30px" />
+            </a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li>@Html.ActionLink("Home","Index","Home")</li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Admin<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="http://localhost:51437/UsersAdmin">UserAdmin</a></li>
+                        <li><a href="http://localhost:51437/RolesAdmin">RoleAdmin</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Department<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li>@Html.ActionLink("Create Department", "Create", "Departments")</li>
+                        <li>@Html.ActionLink("All Departments", "Index", "Departments")</li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Courses<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li>@Html.ActionLink("Create Course", "Create", "Courses")</li>
+                        <li>@Html.ActionLink("All Courses", "Index", "Courses")</li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Studnent<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li>@Html.ActionLink("Register Student", "Create", "Students")</li>
+                        <li>@Html.ActionLink("All Students", "Index", "Students")</li>
+                        <li>@Html.ActionLink("Enrolled Courses Of Student", "ShowStudentCourses", "Students")</li>
+
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Student Result<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li>@Html.ActionLink("Assign Result", "Create", "StudentResults")</li>
+                        <li>@Html.ActionLink("View Semester Final Result", "ViewSemesterFinalResult", "StudentResults")</li>
+                        <li>@Html.ActionLink("View Final Result", "GetFinalResult", "StudentResults")</li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Teacher<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li>@Html.ActionLink("Teacher Register", "Create", "Teachers")</li>
+                        <li>@Html.ActionLink("All Teachers", "Index", "Teachers")</li>
+                    </ul>
+                </li>
+            </ul>
+            @Html.Partial("_LoginPartial")
+        </div>
+    </div>
+</div>
+
+@section styles{
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+}
+
+

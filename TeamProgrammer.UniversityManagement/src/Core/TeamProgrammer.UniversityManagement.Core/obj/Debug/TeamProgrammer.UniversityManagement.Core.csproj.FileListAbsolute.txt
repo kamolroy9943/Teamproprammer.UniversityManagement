@@ -1,0 +1,10 @@
+D:\Team Programmers\TeamProgrammer.UniversityManagement\src\Core\TeamProgrammer.UniversityManagement.Core\bin\Debug\TeamProgrammer.UniversityManagement.Core.dll
+D:\Team Programmers\TeamProgrammer.UniversityManagement\src\Core\TeamProgrammer.UniversityManagement.Core\bin\Debug\TeamProgrammer.UniversityManagement.Core.pdb
+D:\Team Programmers\TeamProgrammer.UniversityManagement\src\Core\TeamProgrammer.UniversityManagement.Core\obj\Debug\TeamProgrammer.UniversityManagement.Core.dll
+D:\Team Programmers\TeamProgrammer.UniversityManagement\src\Core\TeamProgrammer.UniversityManagement.Core\obj\Debug\TeamProgrammer.UniversityManagement.Core.pdb
+D:\Team Programmers\TeamProgrammer.UniversityManagement\src\Core\TeamProgrammer.UniversityManagement.Core\bin\Debug\TeamProgrammer.UniversityManagement.Core.dll.config
+D:\Team Programmers\TeamProgrammer.UniversityManagement\src\Core\TeamProgrammer.UniversityManagement.Core\bin\Debug\EntityFramework.dll
+D:\Team Programmers\TeamProgrammer.UniversityManagement\src\Core\TeamProgrammer.UniversityManagement.Core\bin\Debug\EntityFramework.SqlServer.dll
+D:\Team Programmers\TeamProgrammer.UniversityManagement\src\Core\TeamProgrammer.UniversityManagement.Core\bin\Debug\EntityFramework.xml
+D:\Team Programmers\TeamProgrammer.UniversityManagement\src\Core\TeamProgrammer.UniversityManagement.Core\bin\Debug\EntityFramework.SqlServer.xml
+D:\Team Programmers\TeamProgrammer.UniversityManagement\src\Core\TeamProgrammer.UniversityManagement.Core\obj\Debug\TeamProgrammer.UniversityManagement.Core.csprojResolveAssemblyReference.cache

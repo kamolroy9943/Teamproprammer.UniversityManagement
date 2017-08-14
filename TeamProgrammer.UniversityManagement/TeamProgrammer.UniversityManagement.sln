@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Src", "Src", "{DF2976A4-B5D7-4F01-BAD2-3DA62CAB2788}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{31927D94-4C8E-47C2-A93C-715B5C009DB3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{1D6FACCC-13B1-42DF-8DC6-D5C2799F146E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeamProgrammer.UniversityManagement.Core", "src\Core\TeamProgrammer.UniversityManagement.Core\TeamProgrammer.UniversityManagement.Core.csproj", "{D975C3F6-3405-46A3-AA6F-4F68373E63A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeamProgrammer.UniversityManagement.DataRepository", "src\Infrastructure\TeamProgrammer.UniversityManagement.DataRepository\TeamProgrammer.UniversityManagement.DataRepository.csproj", "{F27A0A30-7776-41C3-A84F-8E5806C600F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeamProgrammer.UniversityManagement.Business", "src\Infrastructure\TeamProgrammer.UniversityManagement.Business\TeamProgrammer.UniversityManagement.Business.csproj", "{092BCB34-E27F-4C86-A8DA-ED19C00EB52C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeamProgrammer.UniversityManagement.Web", "src\TeamProgrammer.UniversityManagement.Web\TeamProgrammer.UniversityManagement.Web.csproj", "{5A7E0DB2-7FFF-439B-B6DD-76341CD23265}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D975C3F6-3405-46A3-AA6F-4F68373E63A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D975C3F6-3405-46A3-AA6F-4F68373E63A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D975C3F6-3405-46A3-AA6F-4F68373E63A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D975C3F6-3405-46A3-AA6F-4F68373E63A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F27A0A30-7776-41C3-A84F-8E5806C600F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F27A0A30-7776-41C3-A84F-8E5806C600F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F27A0A30-7776-41C3-A84F-8E5806C600F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F27A0A30-7776-41C3-A84F-8E5806C600F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{092BCB34-E27F-4C86-A8DA-ED19C00EB52C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{092BCB34-E27F-4C86-A8DA-ED19C00EB52C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{092BCB34-E27F-4C86-A8DA-ED19C00EB52C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{092BCB34-E27F-4C86-A8DA-ED19C00EB52C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A7E0DB2-7FFF-439B-B6DD-76341CD23265}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A7E0DB2-7FFF-439B-B6DD-76341CD23265}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A7E0DB2-7FFF-439B-B6DD-76341CD23265}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A7E0DB2-7FFF-439B-B6DD-76341CD23265}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{31927D94-4C8E-47C2-A93C-715B5C009DB3} = {DF2976A4-B5D7-4F01-BAD2-3DA62CAB2788}
+		{1D6FACCC-13B1-42DF-8DC6-D5C2799F146E} = {DF2976A4-B5D7-4F01-BAD2-3DA62CAB2788}
+		{D975C3F6-3405-46A3-AA6F-4F68373E63A4} = {31927D94-4C8E-47C2-A93C-715B5C009DB3}
+		{F27A0A30-7776-41C3-A84F-8E5806C600F0} = {1D6FACCC-13B1-42DF-8DC6-D5C2799F146E}
+		{092BCB34-E27F-4C86-A8DA-ED19C00EB52C} = {1D6FACCC-13B1-42DF-8DC6-D5C2799F146E}
+		{5A7E0DB2-7FFF-439B-B6DD-76341CD23265} = {DF2976A4-B5D7-4F01-BAD2-3DA62CAB2788}
+	EndGlobalSection
+EndGlobal
